@@ -1,0 +1,124 @@
+/**
+ * 每日更新 README(GitHub Actions 每天 0:00 北京时间运行)
+ * - 拉取公开免费节点源,统计当日节点数
+ * - 计算「已稳定运行 N 天」
+ * - 生成 README(含机场推荐板块)
+ * 用法:node scripts/update.mjs
+ */
+import { writeFileSync } from 'node:fs';
+
+const SITE = 'https://www.jichangcha.com';
+const XDM_GO = `${SITE}/go/xingdaomeng/`; // 星岛梦官网(经本站中转页)
+const XDM_REVIEW = `${SITE}/brands/xingdaomeng/`;
+const START_DATE = '2025-03-08'; // 运营起始日,改这里调整"已稳定运行 N 天"
+
+// 拉源用直连(GitHub runner 在境外可访问);展示给用户的链接用加速地址
+const SRC_UNIVERSAL = 'https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/v.txt';
+const SUB_UNIVERSAL = 'https://ghfast.top/https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/v.txt';
+const SUB_CLASH = 'https://ghfast.top/https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/c.yaml';
+const MIRROR_UNIVERSAL = 'https://cdn.jsdelivr.net/gh/free18/v2ray@main/v.txt';
+const MIRROR_CLASH = 'https://cdn.jsdelivr.net/gh/free18/v2ray@main/c.yaml';
+
+const today = new Date();
+const dateStr = today.toISOString().slice(0, 10);
+const days = Math.max(1, Math.floor((today.getTime() - new Date(START_DATE).getTime()) / 86400000));
+
+// 统计当日节点数(拉取失败不阻断,用占位)
+let nodeCount = 0;
+try {
+  const res = await fetch(SRC_UNIVERSAL, { signal: AbortSignal.timeout(20000) });
+  const b64 = (await res.text()).trim();
+  const decoded = Buffer.from(b64, 'base64').toString('utf8');
+  nodeCount = decoded.split(/\r?\n/).filter((l) => l.includes('://')).length;
+} catch (e) {
+  console.log('拉取节点源失败(不影响 README 生成):', e.message);
+}
+const countText = nodeCount > 0 ? `约 ${nodeCount} 个` : '每日更新';
+
+const readme = `# 每日免费节点 · Free Nodes(每天 0:00 自动更新)
+
+![更新日期](https://img.shields.io/badge/更新-${dateStr.replace(/-/g, '--')}-00e676) ![节点数](https://img.shields.io/badge/今日节点-${encodeURIComponent(countText)}-00b0ff) ![稳定运行](https://img.shields.io/badge/已稳定运行-${days}%20天-fbbf24) [![主站](https://img.shields.io/badge/主站-jichangcha.com-00e676)](${SITE}/)
+
+> 🕛 **${dateStr} 已更新 · 今日 ${countText}节点 · 已稳定运行 ${days} 天**
+> 每天凌晨 0:00 自动聚合公开免费节点,支持 Clash / v2ray / 小火箭一键导入。
+
+---
+
+## ⚠️ 使用前必读(重要)
+
+- 免费节点来自公开网络聚合,**速度慢、随时失效**,仅供临时应急体验
+- **安全风险**:节点运营者能看到你的流量,**切勿用于登录网银、重要账号或支付**
+- 需要长期稳定、能看 Netflix、稳用 ChatGPT?本站主推 **[星岛梦机场(8 元/月起,优惠码 nmw888)](${XDM_REVIEW})**
+
+## 📡 每日更新订阅链接(推荐)
+
+导入客户端**一次**,以后每天自动拉取最新节点,无需重复操作。
+
+**通用订阅**(小火箭 / v2rayN / v2rayNG):
+\`\`\`
+${SUB_UNIVERSAL}
+\`\`\`
+
+**Clash 订阅**(Clash Verge / Meta):
+\`\`\`
+${SUB_CLASH}
+\`\`\`
+
+<details>
+<summary>上面打不开?点这里换备用镜像</summary>
+
+**jsDelivr CDN(国内较稳):**
+\`\`\`
+${MIRROR_UNIVERSAL}
+${MIRROR_CLASH}
+\`\`\`
+</details>
+
+## 🚀 三步导入
+
+1. **复制订阅链接**:通用订阅给小火箭/v2rayN,Clash 订阅给 Clash 系
+2. **导入客户端**:Clash Verge「订阅」页粘贴导入;小火箭点「+」选 Subscribe 粘贴
+3. **选节点开代理**:刷新后选延迟低的节点,打开系统代理。全绿失效了明天再来
+
+图文教程:[Clash 导入](${SITE}/blog/clash-jichang-tuijian/) · [小火箭导入](${SITE}/blog/shadowrocket-jichang-tuijian/)
+
+## 💡 免费节点 vs 星岛梦机场
+
+| 对比项 | 免费节点 | 星岛梦机场 |
+| ---- | ---- | ---- |
+| 晚高峰速度 | 慢 · 时常卡顿 | 企业级专线满速不掉档 |
+| 稳定性 | 几小时~几天就失效 | 六年老牌,故障有客服 |
+| 安全性 | ⚠️ 运营者可见流量,勿登账号 | 内网专线加密,可放心用 |
+| 流媒体/AI | 基本不解锁 | Netflix / ChatGPT 全解锁 |
+| 价格 | 免费 | 8 元/月起(码 nmw888) |
+
+免费节点适合「偶尔应急」,当日常主力会很痛苦——慢、断、还有安全隐患。真要长期稳定,月付试一个星岛梦是另一个世界。
+
+## 🥈 稳定之选:星岛梦(本站主推)
+
+**六年老牌 · 企业级内网专线 · 无倍率 · 不限设备数**,是「求稳、长期用」用户的默认答案。
+
+- ✅ 全节点无倍率,流量实打实
+- ✅ 不限设备数,手机电脑一份订阅全覆盖
+- ✅ Netflix / Disney+ / ChatGPT 全解锁
+- ✅ 8 元/月起,新人优惠码 \`nmw888\` 享 9 折
+
+👉 **[前往星岛梦官网(优惠码 nmw888)](${XDM_GO})** | [看完整测评](${XDM_REVIEW})
+
+## 🔗 更多内容
+
+- 🏠 [机场查主站](${SITE}/) —— 16 家机场横向对比 · 189 题长尾问题库 · 图文教程
+- 🏆 [2026 机场推荐排行榜](https://github.com/jichangx/2026-jichangcha-tuijian) —— 全部机场总榜
+- 💬 Telegram:[@wanzuanjiedian](https://t.me/wanzuanjiedian)
+
+## 📌 声明
+
+- 节点由公开开源项目每日聚合(感谢 [free18/v2ray](https://github.com/free18/v2ray) · [Barabama/FreeNodes](https://github.com/Barabama/FreeNodes)),本仓库仅做聚合展示,不对其可用性与安全性负责
+- 内容仅供学习交流,请遵守当地法律法规;涉及隐私的操作请使用付费机场
+- 本仓库含推广链接,可能带来收益,不影响内容
+
+⭐ 觉得有用请点个 Star,每天 0:00 自动更新,你会在动态里看到。
+`;
+
+writeFileSync(new URL('../README.md', import.meta.url), readme);
+console.log(`README 已更新:${dateStr} · 节点 ${countText} · 运行 ${days} 天`);
