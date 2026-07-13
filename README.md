@@ -1,8 +1,8 @@
 # 每日免费节点 · Free Nodes(每天 0:00 自动更新)
 
-![更新日期](https://img.shields.io/badge/更新-2026--07--12-00e676) ![节点数](https://img.shields.io/badge/今日节点-%E7%BA%A6%20420%20%E4%B8%AA-00b0ff) ![稳定运行](https://img.shields.io/badge/已稳定运行-491%20天-fbbf24) [![主站](https://img.shields.io/badge/主站-jichangcha.com-00e676)](https://www.jichangcha.com/)
+![更新日期](https://img.shields.io/badge/更新-2026--07--13-00e676) ![节点数](https://img.shields.io/badge/今日节点-%E7%BA%A6%20203%20%E4%B8%AA-00b0ff) ![稳定运行](https://img.shields.io/badge/已稳定运行-492%20天-fbbf24) [![主站](https://img.shields.io/badge/主站-jichangcha.com-00e676)](https://www.jichangcha.com/)
 
-> 🕛 **2026-07-12 已更新 · 今日 约 420 个节点 · 已稳定运行 491 天**
+> 🕛 **2026-07-13 已更新 · 今日 约 203 个节点 · 已稳定运行 492 天**
 > 每天凌晨 0:00 自动聚合公开免费节点,支持 Clash / v2ray / 小火箭一键导入。
 
 ---
