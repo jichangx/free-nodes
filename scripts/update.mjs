@@ -37,10 +37,11 @@ const countText = nodeCount > 0 ? `约 ${nodeCount} 个` : '每日更新';
 
 const readme = `# 每日免费节点 · Free Nodes(每天 0:00 自动更新)
 
-![更新日期](https://img.shields.io/badge/更新-${dateStr.replace(/-/g, '--')}-00e676) ![节点数](https://img.shields.io/badge/今日节点-${encodeURIComponent(countText)}-00b0ff) ![稳定运行](https://img.shields.io/badge/已稳定运行-${days}%20天-fbbf24) [![主站](https://img.shields.io/badge/主站-jichangcha.com-00e676)](${SITE}/)
+![更新日期](https://img.shields.io/badge/更新-${dateStr.replace(/-/g, '--')}-00e676) ![节点数](https://img.shields.io/badge/今日节点-${encodeURIComponent(countText)}-00b0ff) ![稳定运行](https://img.shields.io/badge/已稳定运行-${days}%20天-fbbf24) [![主站](https://img.shields.io/badge/主站-jichangcha.com-00e676)](${SITE}/) [![Telegram](https://img.shields.io/badge/Telegram-%40jichangcha-26A5E4?logo=telegram&logoColor=white)](https://t.me/jichangcha)
 
 > 🕛 **${dateStr} 已更新 · 今日 ${countText}节点 · 已稳定运行 ${days} 天**
 > 每天凌晨 0:00 自动聚合公开免费节点,支持 Clash / v2ray / 小火箭一键导入。
+> 📣 不想每天来刷?TG 频道每早 9 点自动推送:**[@jichangcha](https://t.me/jichangcha)**
 
 ---
 
