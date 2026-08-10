@@ -27,7 +27,10 @@ const days = Math.max(1, Math.floor((today.getTime() - new Date(START_DATE).getT
 let nodeCount = 0;
 try {
   const res = await fetch(SRC_UNIVERSAL, { signal: AbortSignal.timeout(20000) });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const b64 = (await res.text()).trim();
+  if (b64.length > 500000) throw new Error('Response too large');
+  if (!/^[A-Za-z0-9+/=\r\n]+$/.test(b64)) throw new Error('Invalid base64 content');
   const decoded = Buffer.from(b64, 'base64').toString('utf8');
   nodeCount = decoded.split(/\r?\n/).filter((l) => l.includes('://')).length;
 } catch (e) {
