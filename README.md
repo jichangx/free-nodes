@@ -1,8 +1,8 @@
 # 每日免费节点 · Free Nodes(每天 0:00 自动更新)
 
-![更新日期](https://img.shields.io/badge/更新-2026--08--14-00e676) ![节点数](https://img.shields.io/badge/今日节点-%E7%BA%A6%20338%20%E4%B8%AA-00b0ff) ![稳定运行](https://img.shields.io/badge/已稳定运行-524%20天-fbbf24) [![主站](https://img.shields.io/badge/主站-jichangcha.com-00e676)](https://www.jichangcha.com/) [![Telegram](https://img.shields.io/badge/Telegram-%40jichangcha-26A5E4?logo=telegram&logoColor=white)](https://t.me/jichangcha)
+![更新日期](https://img.shields.io/badge/更新-2026--08--15-00e676) ![节点数](https://img.shields.io/badge/今日节点-%E7%BA%A6%20212%20%E4%B8%AA-00b0ff) ![稳定运行](https://img.shields.io/badge/已稳定运行-525%20天-fbbf24) [![主站](https://img.shields.io/badge/主站-jichangcha.com-00e676)](https://www.jichangcha.com/) [![Telegram](https://img.shields.io/badge/Telegram-%40jichangcha-26A5E4?logo=telegram&logoColor=white)](https://t.me/jichangcha)
 
-> 🕛 **2026-08-14 已更新 · 今日 约 338 个节点 · 已稳定运行 524 天**
+> 🕛 **2026-08-15 已更新 · 今日 约 212 个节点 · 已稳定运行 525 天**
 > 每天凌晨 0:00 自动聚合公开免费节点,支持 Clash / v2ray / 小火箭一键导入。
 > 📣 不想每天来刷?TG 频道每早 9 点自动推送:**[@jichangcha](https://t.me/jichangcha)**
 
