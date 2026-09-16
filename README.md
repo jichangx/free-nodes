@@ -74,6 +74,7 @@ https://cdn.jsdelivr.net/gh/free18/v2ray@main/c.yaml
 
 - 🏠 [机场查主站](https://www.jichangcha.com/) —— 16 家机场横向对比 · 189 题长尾问题库 · 图文教程
 - 🏆 [2026 机场推荐清单](https://github.com/jichangx/2026-jichangcha-tuijian) —— 老牌 / 性价比 / 稳定 / 高端四类整理,套餐价格、优惠码与站长实测记录,每日同步
+- 🗂️ [四站精品聚合](https://github.com/jichangx) —— 机场推荐 / 免费节点 / 共享 Apple ID / 跑路预警 / 客户端教程 / 翻墙科普一页看全
 - 💬 Telegram:[@wanzuanjiedian](https://t.me/wanzuanjiedian)
 
 ## 📌 声明
