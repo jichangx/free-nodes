@@ -50,6 +50,7 @@ const readme = `# 每日免费节点 · Free Nodes(每天 0:00 自动更新)
 - 免费节点来自公开网络聚合,**速度慢、随时失效**,仅供临时应急体验
 - **安全风险**:节点运营者能看到你的流量,**切勿用于登录网银、重要账号或支付**
 - 需要长期稳定、能看 Netflix、稳用 ChatGPT?本站主推 **[星岛梦机场(8 元/月起,优惠码 nmw888)](${XDM_REVIEW})**
+- 想对比更多付费机场?看 **[2026 机场推荐清单](https://github.com/jichangx/2026-jichangcha-tuijian)**:老牌 / 性价比 / 稳定 / 高端四类整理,每日同步
 
 ## 📡 每日更新订阅链接(推荐)
 
@@ -109,7 +110,7 @@ ${MIRROR_CLASH}
 ## 🔗 更多内容
 
 - 🏠 [机场查主站](${SITE}/) —— 16 家机场横向对比 · 189 题长尾问题库 · 图文教程
-- 🏆 [2026 机场推荐排行榜](https://github.com/jichangx/2026-jichangcha-tuijian) —— 全部机场总榜
+- 🏆 [2026 机场推荐清单](https://github.com/jichangx/2026-jichangcha-tuijian) —— 老牌 / 性价比 / 稳定 / 高端四类整理,套餐价格、优惠码与站长实测记录,每日同步
 - 💬 Telegram:[@wanzuanjiedian](https://t.me/wanzuanjiedian)
 
 ## 📌 声明
