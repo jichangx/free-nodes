@@ -1,8 +1,8 @@
 # 每日免费节点 · Free Nodes(每天 0:00 自动更新)
 
-![更新日期](https://img.shields.io/badge/更新-2026--09--17-00e676) ![节点数](https://img.shields.io/badge/今日节点-%E7%BA%A6%20308%20%E4%B8%AA-00b0ff) ![稳定运行](https://img.shields.io/badge/已稳定运行-558%20天-fbbf24) [![主站](https://img.shields.io/badge/主站-jichangcha.com-00e676)](https://www.jichangcha.com/) [![Telegram](https://img.shields.io/badge/Telegram-%40jichangcha-26A5E4?logo=telegram&logoColor=white)](https://t.me/jichangcha)
+![更新日期](https://img.shields.io/badge/更新-2026--09--18-00e676) ![节点数](https://img.shields.io/badge/今日节点-%E7%BA%A6%20342%20%E4%B8%AA-00b0ff) ![稳定运行](https://img.shields.io/badge/已稳定运行-559%20天-fbbf24) [![主站](https://img.shields.io/badge/主站-jichangcha.com-00e676)](https://www.jichangcha.com/) [![Telegram](https://img.shields.io/badge/Telegram-%40jichangcha-26A5E4?logo=telegram&logoColor=white)](https://t.me/jichangcha)
 
-> 🕛 **2026-09-17 已更新 · 今日 约 308 个节点 · 已稳定运行 558 天**
+> 🕛 **2026-09-18 已更新 · 今日 约 342 个节点 · 已稳定运行 559 天**
 > 每天凌晨 0:00 自动聚合公开免费节点,支持 Clash / v2ray / 小火箭一键导入。
 > 📣 不想每天来刷?TG 频道每早 9 点自动推送:**[@jichangcha](https://t.me/jichangcha)**
 
@@ -74,7 +74,7 @@ https://cdn.jsdelivr.net/gh/free18/v2ray@main/c.yaml
 
 - 🏠 [机场查主站](https://www.jichangcha.com/) —— 16 家机场横向对比 · 189 题长尾问题库 · 图文教程
 - 🏆 [2026 机场推荐清单](https://github.com/jichangx/2026-jichangcha-tuijian) —— 老牌 / 性价比 / 稳定 / 高端四类整理,套餐价格、优惠码与站长实测记录,每日同步
-- 🗂️ [四站精品聚合](https://github.com/jichangx) —— 机场推荐 / 免费节点 / 共享 Apple ID / 跑路预警 / 客户端教程 / 翻墙科普一页看全
+- 🗂️ [机场查精品聚合](https://github.com/jichangx) —— 机场推荐 / 免费节点 / 共享 Apple ID / 跑路预警 / 客户端教程 / 翻墙科普一页看全
 - 💬 Telegram:[@wanzuanjiedian](https://t.me/wanzuanjiedian)
 
 ## 📌 声明
